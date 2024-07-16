@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "uD2Sc/n276TLwIUqq/BpdhxQxm2YpgO7SlsAURUuNvA0XuTZBNIW7uZXI7MJAbRxHCnHG/WkXt5JyAvPsq289g==",
+  "success": true,
+  "projectFilePath": "C:\\Clone\\CNPM_FastMart\\source\\MyMvcApp\\MyMvcApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

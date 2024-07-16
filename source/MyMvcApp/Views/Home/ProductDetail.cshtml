@@ -1,0 +1,18 @@
+﻿@model MyMvcApp.Models.Product
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chi Tiết Sản Phẩm - FastMart</title>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+</head>
+<body>
+    <div class="product-detail">
+        <img src="@Model.ImageUrl" alt="@Model.Name" />
+        <h2>@Model.Name</h2>
+        <p>@Model.Description</p>
+        <p>Giá: @Model.Price.ToString("C")</p>
+        <a href="@Url.Action("Index")">Quay lại trang chủ</a>
+    </div>
+</body>
+</html>

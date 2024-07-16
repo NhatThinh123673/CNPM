@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyMvcApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyMvcApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="~/images/Logo.png" alt="FastMart" />
+            </div>
+            <h1>FastMart</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">Trang Chủ</a></li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("ProductController", "Controllers")" class="dropbtn">Danh mục</a>
+                        <div class="dropdown-content">
+                            <a href="/Product/Category?category=Nước giặt OMO">Nước giặt</a>
+                            <a href="#">Nước mắm</a>
+                            <a href="#">Thịt</a>
+                            <a href="#">Trái cây</a>
+                            <a href="#">Dầu ăn</a>
+                            <a href="#">Mì</a>
+                            <a href="#">Gạo</a>
+                            <a href="#">Bia</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search" />
+                <button><i class="fas fa-search"></i></button>
+                <a href="/account/login">Đăng Nhập</a>
+                <a href="/account/register">Đăng Ký</a>
+            </div>
+        </div>
+    </header>
+    <div class="banner">
+        <img src="~/images/banner.jpg" alt="Quảng cáo" />
+    </div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>FastMart</h2>
+                <p>Siêu thị bán hàng trực tuyến, cung cấp các sản phẩm tiêu dùng, thực phẩm, và nhiều mặt hàng khác.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Liên kết</h2>
+                <ul>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Liên hệ</h2>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 456 Đường ABC, TP. Hồ Chí Minh</li>
+                    <li><i class="fas fa-phone"></i> +84 123 456 789</li>
+                    <li><i class="fas fa-envelope"></i> info@fastmart.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 FastMart. Đã đăng ký bản quyền.
+        </div>
+    </footer>
+</body>
+</html>

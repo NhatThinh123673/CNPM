@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<MyMvcApp.Models.Product>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang Chủ -FastMart</title>
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+</head>
+<body>
+    <h1>Chào mừng đến với FastMart</h1>
+    <div class="product-list">
+        @foreach (var product in Model)
+        {
+            <div class="product-item">
+                <img src="@product.ImageUrl" alt="@product.Name" />
+                <h2>@product.Name</h2>
+                <p>@product.Description</p>
+                <p>Giá: @product.Price.ToString("C")</p>
+                <a href="@Url.Action("ProductDetail", new { id = product.Id })">Xem Chi Tiết</a>
+            </div>
+        }
+    </div>
+</body>
+</html>
